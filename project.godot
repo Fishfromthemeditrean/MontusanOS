@@ -1,0 +1,48 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
+[application]
+
+config/name="MontusanOS V-0.1.0"
+run/main_scene="uid://j48htlg1pa4d"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+globals="*res://scripts/other/globals.gd"
+file="*uid://b04s4w6ubi1hl"
+app="*uid://b0mriqpgmeqcv"
+node="*uid://b2j7hnj2p62th"
+
+[debug]
+
+shapes/navigation/3d/geometry_face_color=Color(0.61141336, 0.9999996, 0.99857324, 0.8980392)
+shapes/collision/shape_color=Color(0.5764706, 0.91764706, 1, 0.9254902)
+
+[display]
+
+window/size/mode=3
+window/size/resizable=false
+window/stretch/aspect="expand"
+
+[global_group]
+
+player2=""
+player1=""
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
