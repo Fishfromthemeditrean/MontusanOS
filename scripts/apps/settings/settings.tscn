@@ -1,0 +1,210 @@
+[gd_scene format=3 uid="uid://d4cdg4jr3aueo"]
+
+[ext_resource type="Script" uid="uid://8jcrayh3kayo" path="res://scripts/other/bgcol.gd" id="1_hhty0"]
+[ext_resource type="Script" uid="uid://c4rvic4h6ht2o" path="res://scripts/apps/settings/x.gd" id="2_tfsml"]
+[ext_resource type="Script" uid="uid://dxf7egyfw3307" path="res://scripts/apps/settings/os_name.gd" id="3_e5xy7"]
+[ext_resource type="FontFile" uid="uid://ynxt7p42h5bk" path="res://SysRes/fonts/inter_regular.ttf" id="3_mqvla"]
+[ext_resource type="Script" uid="uid://ciw0kk23ahd3d" path="res://scripts/apps/settings/buttons.gd" id="3_tfsml"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5xy7"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3g5tx"]
+font = ExtResource("3_mqvla")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqvla"]
+
+[node name="Control" type="Control" unique_id=2056243427]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="bg" type="ColorRect" parent="." unique_id=1915028978]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.6180556
+anchor_bottom = 1.0
+color = Color(0.67305154, 0.67305154, 0.67305154, 1)
+metadata/_edit_lock_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="seperator" type="Panel" parent="bg" unique_id=1989039236]
+self_modulate = Color(0.65250754, 0.65250754, 0.65250754, 1)
+top_level = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1736111
+anchor_right = 0.18055555
+anchor_bottom = 1.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e5xy7")
+metadata/_edit_use_anchors_ = true
+
+[node name="X" type="Button" parent="." unique_id=562006773]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -72.0
+offset_bottom = 96.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 64
+text = "X"
+flat = true
+script = ExtResource("2_tfsml")
+metadata/_edit_use_anchors_ = true
+
+[node name="pages" type="Node" parent="." unique_id=1640870577]
+
+[node name="general" type="CanvasLayer" parent="pages" unique_id=1145870600]
+
+[node name="bgcol" type="ColorPickerButton" parent="pages/general" unique_id=888814495]
+anchors_preset = -1
+anchor_left = 0.18055555
+anchor_right = 0.22771992
+anchor_bottom = 0.08184727
+color = Color(0.7294118, 0.6745098, 0.84705883, 1)
+edit_alpha = false
+script = ExtResource("1_hhty0")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="pages/general/bgcol" unique_id=1829520996]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.1666666
+anchor_right = 5.9375
+anchor_bottom = 0.9375
+theme_override_font_sizes/font_size = 32
+text = "Bg color picker"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="sysspecs" type="CanvasLayer" parent="pages" unique_id=2092092422]
+visible = false
+
+[node name="DeName" type="Label" parent="pages/sysspecs" unique_id=828982056]
+anchors_preset = -1
+anchor_left = 0.19444445
+anchor_top = 0.2669753
+anchor_right = 0.3611111
+anchor_bottom = 0.3271605
+offset_bottom = -1.5258789e-05
+text = "device name"
+label_settings = SubResource("LabelSettings_3g5tx")
+script = ExtResource("3_e5xy7")
+metadata/_edit_use_anchors_ = true
+
+[node name="DevV" type="Label" parent="pages/sysspecs" unique_id=852901342]
+anchors_preset = -1
+anchor_left = 0.19444445
+anchor_top = 0.20987654
+anchor_right = 0.28993055
+anchor_bottom = 0.27006173
+offset_top = -1.0
+offset_bottom = -1.0
+text = "version"
+label_settings = SubResource("LabelSettings_3g5tx")
+script = ExtResource("3_e5xy7")
+metadata/_edit_use_anchors_ = true
+
+[node name="OSName" type="Label" parent="pages/sysspecs" unique_id=85427176]
+anchors_preset = -1
+anchor_left = 0.19444445
+anchor_top = 0.14814815
+anchor_right = 0.30208334
+anchor_bottom = 0.20833333
+text = "Osname"
+label_settings = SubResource("LabelSettings_3g5tx")
+script = ExtResource("3_e5xy7")
+metadata/_edit_use_anchors_ = true
+
+[node name="CPUC" type="Label" parent="pages/sysspecs" unique_id=1959320240]
+anchors_preset = -1
+anchor_left = 0.19444445
+anchor_top = 0.3271605
+anchor_right = 0.33506945
+anchor_bottom = 0.38734567
+offset_top = -1.5258789e-05
+text = "CPU count"
+label_settings = SubResource("LabelSettings_3g5tx")
+script = ExtResource("3_e5xy7")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="pages/sysspecs" unique_id=878440906]
+anchors_preset = -1
+anchor_left = 0.17708333
+anchor_top = 0.2669753
+anchor_right = 1.0
+anchor_bottom = 0.27469134
+offset_bottom = 1.5258789e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="shadow" type="Label" parent="pages/sysspecs" unique_id=1885695595]
+self_modulate = Color(0, 0, 0, 1)
+anchors_preset = -1
+anchor_left = 0.3454861
+anchor_top = 0.23148148
+anchor_right = 0.4782986
+anchor_bottom = 0.2669753
+offset_left = 45.0
+offset_top = -54.0
+offset_right = 45.0
+offset_bottom = -54.0
+text = "MontusanOS v 0.9.1"
+label_settings = SubResource("LabelSettings_mqvla")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="montusanOSver2" type="Label" parent="pages/sysspecs" unique_id=1893328920]
+anchors_preset = -1
+anchor_left = 0.35069445
+anchor_top = 0.23148148
+anchor_right = 0.48350695
+anchor_bottom = 0.2669753
+offset_left = 42.0
+offset_top = -53.0
+offset_right = 42.0
+offset_bottom = -53.0
+text = "MontusanOS v 0.9.1"
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="Ooengpengl" type="Label" parent="pages/sysspecs" unique_id=1569624465]
+anchors_preset = -1
+anchor_left = 0.48350695
+anchor_top = 0.18672839
+anchor_right = 0.640625
+anchor_bottom = 0.26234567
+text = "Powered by Opengl for 
+embedded systems."
+metadata/_edit_use_anchors_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1545254169]
+layout_mode = 0
+anchor_right = 0.1736111
+anchor_bottom = 1.0077161
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="container" type="VBoxContainer" parent="ScrollContainer" unique_id=827859052]
+layout_mode = 2
+metadata/_edit_group_ = true
+
+[node name="general" type="Button" parent="ScrollContainer/container" unique_id=440245158]
+layout_mode = 2
+text = "themes and general"
+script = ExtResource("3_tfsml")
+
+[node name="sysspecs" type="Button" parent="ScrollContainer/container" unique_id=1170432044]
+layout_mode = 2
+text = "system specs"
+script = ExtResource("3_tfsml")
+
+[connection signal="pressed" from="X" to="X" method="_on_pressed"]
+[connection signal="color_changed" from="pages/general/bgcol" to="pages/general/bgcol" method="_on_color_changed"]
